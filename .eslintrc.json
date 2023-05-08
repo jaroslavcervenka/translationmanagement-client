@@ -1,0 +1,73 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier",
+    "plugin:cypress/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+    "react", "@typescript-eslint", "prettier", "mui-path-imports"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"],
+        "paths": ["./src"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true,
+    "cypress/globals": true
+  },
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+        "allowString" : false,
+        "allowNumber" : false
+      }
+    ],
+    "comma-dangle": "off",
+    "function-paren-newline": "off",
+    "global-require": "off",
+    "no-inner-declarations": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-internal-modules": [ "error", {
+      "forbid": [ "**/actions/*", "source-map-support/*" ]
+    } ],
+    "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
+    "import/named": 0,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/no-cycle": [2, { "maxDepth": 1 }],
+    "import/no-relative-parent-imports": "off",
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error"
+  },
+  "ignorePatterns": ["src/**/*.test.ts"]
+}
