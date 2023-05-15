@@ -1,20 +1,23 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import React, { FC, PropsWithChildren } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+import { Inter } from 'next/font/google';
 
-export const metadata = {
-  title: 'Translation management client',
-}
+import Providers from '@/application/providers';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
+  console.log('Layout');
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;

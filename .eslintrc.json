@@ -14,7 +14,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": ["./tsconfig.json"] },
   "plugins": [
-    "react", "@typescript-eslint", "prettier", "mui-path-imports"
+    "react", "@typescript-eslint", "prettier"
   ],
   "settings": {
     "react": {

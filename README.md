@@ -1,15 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) example of client for [translation management API](https://github.com/jaroslavcervenka/translationmanagement-api).
+
+It provides implementations of useful concepts.
+
+Patterns
+- Clean architecture
+- Use features as logic scaffolding
+- Global application state
+- Separate domain and DTO
+- Response payload validation
+
+Libraries
+- Next JS
+- Redux Toolkit
+- React Hook Form
+- Tailwind CSS
+- ts-auto-guard
+- Storybook
+- Cypress
+
+## TODO
+There are a few things I need to improve and implement. Sorry for that.
+I hope it will be ASAP.
+
+- Architecture diagram
+- Unit, integration and UI tests
+- Generate type guards into 1 common file
+- Use Tailwind components
+- Separate form components
+- Use logging library
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -26,9 +52,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
